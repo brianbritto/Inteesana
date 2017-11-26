@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Inteesana</string>
+    <string-array name="ciudades_array">
+        <item>Trujillo</item>
+        <item>Lima</item>
+        <item>Arequipa</item>
+        <item>Piura</item>
+    </string-array>
+</resources>

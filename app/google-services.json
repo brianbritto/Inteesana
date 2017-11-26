@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "534379385889",
+    "firebase_url": "https://inteesana.firebaseio.com",
+    "project_id": "inteesana",
+    "storage_bucket": "inteesana.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:534379385889:android:45214a41cee3fd8f",
+        "android_client_info": {
+          "package_name": "pe.hackspace.inteesana"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "534379385889-rt331an0ik6tcg9k25e1tmkaqcr8pflp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAzS0WhB6NX-doUUTgLaJi-OmBR4r9ynrQ"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
