@@ -27,4 +27,5 @@ data class CentroMedico(val ciudad:String = "",
                         val telefono:String = "",
                         val tipo:Int = 0,
                         val consulta:String = "",
-                        val descripcion:String = "")
+                        val descripcion:String = "",
+                        val imageUrl:String = "")
