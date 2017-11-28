@@ -6,12 +6,12 @@
         <item>Arequipa</item>
         <item>Piura</item>
     </string-array>
-    <string name="title_activity_main">MainActivity</string>
+    <string name="title_activity_main">Menú Principal</string>
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
-    <string name="action_settings">Settings</string>
+    <string name="action_settings">Cerrar Sesión</string>
     <string name="text_terminos">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi commodo consequat diam, vel sodales velit. Pellentesque varius, neque in accumsan dignissim, diam enim convallis ligula, nec vestibulum felis felis quis quam. Cras eu felis risus. Fusce dictum ex libero, ut interdum augue feugiat sit amet. Maecenas lobortis quam nec mi malesuada, a eleifend leo tincidunt. Nam eget enim erat. Proin facilisis, justo non semper gravida, odio sem convallis ante, at finibus elit diam a ante. Integer vitae eros porta, luctus lacus cursus, dictum neque. Pellentesque ante ligula, vestibulum quis laoreet non, ornare vitae augue.</string>
     <string name="title_activity_maps">Map</string>
 </resources>
