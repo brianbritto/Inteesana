@@ -7,4 +7,5 @@ import pe.hackspace.inteesana.Entity.CentroMedico
  */
 object Prefs {
     var centroMedico_list = ArrayList<CentroMedico>()
+    var centroMedico : CentroMedico? = null
 }

@@ -7,7 +7,10 @@ import com.bumptech.glide.Glide
 import kotlinx.android.synthetic.main.item_centro_medico.view.*
 import pe.hackspace.inteesana.Entity.CentroMedico
 import pe.hackspace.inteesana.R
+import pe.hackspace.inteesana.Session.Prefs
+import pe.hackspace.inteesana.View.CentroMedicoDetalleActivity
 import pe.hackspace.libertrash.inflate
+import pe.hackspace.libertrash.navigate
 
 /**
  * Created by brianbritto on 08/11/17.
@@ -31,6 +34,10 @@ class CentroMedicoAdapter (var centros: ArrayList<CentroMedico>) : RecyclerView.
                     txt_consulta.text = centro.consulta
                     txt_precio.text = centro.precio.toString()
                     txt_direccion.text = centro.direccion
+                    setOnClickListener{
+                        Prefs.centroMedico = centro
+                        context.navigate<CentroMedicoDetalleActivity>()
+                    }
                 }
             }
         }
