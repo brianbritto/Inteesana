@@ -29,7 +29,7 @@ class MapsActivity : AppCompatActivity(),
                      OnMapReadyCallback{
 
     private lateinit var mMap: GoogleMap
-    private var origen : LatLng? = null
+    private var origen : LatLng = LatLng(-8.095225,-79.049303)// Location UPN
     private var mFusedLocationClient: FusedLocationProviderClient? = null
 
 
@@ -68,13 +68,13 @@ class MapsActivity : AppCompatActivity(),
                     // Got last known location. In some rare situations this can be null.
                     if (location != null) {
                         origen = LatLng(location.latitude, location.longitude)
-                        Log.i("MyLocation -> ",""+origen?.latitude)
-
+                        Log.i("MyLocation -> ",""+origen.latitude+" "+origen.longitude)
+                        drawMap()
                     }
                 }
                 .addOnFailureListener { Log.i("Location -> ","sin resultado") }
 
-        drawMap()// Solo temporal
+        // drawMap()// Solo temporal
     }
 
     private fun drawMap(){
@@ -83,22 +83,23 @@ class MapsActivity : AppCompatActivity(),
         options.color(Color.RED)
         options.width(5f)
 
-        val origen = LatLng(-8.095225,-79.049303)
+        // val origen = LatLng(-8.095225,-79.049303)// Solo temporal
         val centro = Prefs.centroMedico
         val destino = LatLng(centro!!.latitud, centro.longitud)
         // mMap.addMarker(MarkerOptions().position(origen).title("Mi posición actual"))
         mMap.addMarker(MarkerOptions().position(destino).title(centro.nombre))
 
-        val url = getURL(origen!!, destino)
+        val url = getURL(origen, destino)
         doAsync {
             val result = URL(url).readText()
+            Log.i("resultURL --> ",result.toString())
             uiThread {
                 val parser: Parser = Parser()
                 val stringBuilder: StringBuilder = StringBuilder(result)
                 val json: JsonObject = parser.parse(stringBuilder) as JsonObject
 
                 val routes = json.array<JsonObject>("routes")
-                val points = routes!!["legs"]["steps"][0] as JsonArray<JsonObject>
+                val points : JsonArray<JsonObject> = routes!!["legs"]["steps"][0] as JsonArray<JsonObject>
 
                 val polypts = points.flatMap { decodePoly(it.obj("polyline")?.string("points")!!)  }
 
